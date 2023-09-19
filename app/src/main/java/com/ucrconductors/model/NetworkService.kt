@@ -19,25 +19,25 @@ class NetworkService {
 
     private val client = OkHttpClient.Builder().build()
     suspend fun postConductorsSession(login: String, password: String): Conductor? {
-        /*val url = "${URI_FOR_REQUEST}/auth/"
+        val url = "${URI_FOR_REQUEST}/auth/"
         val json = Gson().toJson(mapOf("login" to login, "password" to password))
         val requestBody = json.toRequestBody("application/json; charset=utf-8".toMediaType())
-        executeRequest(url, SomeClass::class.java, body = requestBody, method = "POST")*/
-        return Conductor(login, password, "Иван", "Иванов")
+        return executeRequest(url, SomeClass::class.java, body = requestBody, method = "POST")
+        
     }
 
     suspend fun postTransportInfo(transport: Transport): Boolean {
-        /*val url = "${URI_FOR_REQUEST}/transport/"
+        val url = "${URI_FOR_REQUEST}/transport/"
         val json = Gson().toJson(mapOf("id" to transport.id, "transport_num" to transport.transport_num))
         val requestBody = json.toRequestBody("application/json; charset=utf-8".toMediaType())
         val result: Transport? = executeRequest(url, Transport::class.java, body = requestBody, method = "POST")
-        return result != null*/
+        return result != null
         return true
     }
 
     suspend fun fetchUserByCardNumber(cardNumber: String) {
-        /*val url = "${URI_FOR_REQUEST}/users/$cardNumber"
-        executeRequest(url, String::class.java, method = "GET")*/
+        val url = "${URI_FOR_REQUEST}/users/$cardNumber"
+        executeRequest(url, String::class.java, method = "GET")
     }
 
     private suspend fun <T> executeRequest(url: String, responseType: Class<T>, headers: Map<String, String> = emptyMap(), method: String = "GET", body: RequestBody? = null): T? = suspendCancellableCoroutine { continuation ->
@@ -69,11 +69,10 @@ class NetworkService {
                                 Log.d("RESPONSE_JSON", responseString)
                                 continuation.resume(result)
                             } catch (e: JsonSyntaxException) {
-                                // Если возникает JsonSyntaxException, считаем ответ строкой
+
                                 Log.d("RESPONSE_TYPE", "String")
                                 Log.d("RESPONSE_STRING", responseString)
-                                continuation.resume(null) // Или измените null на другое значение, если хотите вернуть строку
-                            }
+                                continuation.resume(null) 
                         } else {
                             Log.w("STATUS onResponse", "No data in response body")
                             continuation.resume(null)
