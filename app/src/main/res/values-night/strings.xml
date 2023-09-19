@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">UCR Conductors</string>
+    <string name="scanner">QR</string>
+    <string name="password">Пароль</string>
+    <string name="login">Логин</string>
+    <string name="authentication">Аутентификация\nпользователя</string>
+    <string name="explanation">Для входа в систему\nвведите логин и пароль</string>
+    <string name="come_in">Войти</string>
+    <string name="status_internet_connection_is_in">Интернет-соединение активно</string>
+    <string name="status_internet_connection_is_out">Интернет-соединение отсутствует</string>
+    <string name="transport">Транспортное средство</string>
+</resources>

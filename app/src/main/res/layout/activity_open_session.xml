@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/workFragmentRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_work_fragment"
+    tools:context=".view.OpenSessionActivity">
+
+    <FrameLayout
+        android:id="@+id/layout_user_data_session"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_corners" />
+
+        <ImageView
+            android:id="@+id/image_small_sihlouette"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/image_sihlouette_small" />
+
+        <TextView
+            android:id="@+id/text_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/monument_extended_regular"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="35sp" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/text_view_user_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/monument_extended_regular"
+        android:gravity="center_horizontal"
+        android:text="@string/info_about_open_session"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_user_data_session" />
+
+    <LinearLayout
+        android:id="@+id/layout_white_edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_user_data">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/field_white_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/field_white" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_text_transport"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="@string/transport"
+                android:inputType="textVisiblePassword"
+                android:textColorHint="@color/gray" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <ImageView
+                android:id="@+id/field_white_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/field_white" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_text_rout"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="@string/rout"
+                android:inputType="textVisiblePassword"
+                android:textColorHint="@color/gray" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_button_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_white_edit_text">
+
+        <ImageButton
+            android:id="@+id/button_start_session"
+            android:layout_width="166dp"
+            android:layout_height="52dp"
+            android:background="@drawable/custom_gradient"
+            android:foregroundGravity="center"
+            app:tint="@color/black" />
+
+        <TextView
+            android:layout_width="166dp"
+            android:layout_height="52dp"
+            android:fontFamily="@font/monument_extended_regular"
+            android:gravity="center"
+            android:text="@string/start_session"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment_container_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <FrameLayout
+        android:id="@+id/fragment_container_for_qr_and_nfc"
+        android:layout_width="350dp"
+        android:layout_height="510dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_user_data_session" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

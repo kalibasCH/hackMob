@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_work_fragment">
+
+    <FrameLayout
+        android:id="@+id/layout_user_data_scanners"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_corners" />
+
+        <ImageView
+            android:id="@+id/image_small_sihlouette"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/image_sihlouette_small" />
+
+        <TextView
+            android:id="@+id/text_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/monument_extended_regular"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="35sp" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_button_complaint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        app:layout_constraintBottom_toTopOf="@id/frame_button_exit_session"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="40dp"
+        >
+
+        <ImageButton
+            android:id="@+id/button_complaint"
+            android:layout_width="166dp"
+            android:layout_height="52dp"
+            android:background="@drawable/custom_gradient"
+            android:foregroundGravity="center"
+            app:tint="@color/black" />
+
+        <TextView
+            android:layout_width="166dp"
+            android:layout_height="52dp"
+            android:fontFamily="@font/monument_extended_regular"
+            android:gravity="center"
+            android:text="@string/send_complaint"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_button_exit_session"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation_bar"
+        android:layout_marginBottom="80dp"
+        >
+
+        <ImageButton
+            android:id="@+id/button_exit_session"
+            android:layout_width="166dp"
+            android:layout_height="52dp"
+            android:background="@drawable/custom_gradient"
+            android:foregroundGravity="center"
+            app:tint="@color/black" />
+
+        <TextView
+            android:layout_width="166dp"
+            android:layout_height="52dp"
+            android:fontFamily="@font/monument_extended_regular"
+            android:gravity="center"
+            android:text="@string/exit_session"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+    </FrameLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#40000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/main_menu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">ЕКЖ кондуктор</string>
+    <string name="QR_scanner">QR</string>
+    <string name="NFC_scanner">NFC</string>
+    <string name="home">Главная</string>
+    <string name="password">Пароль</string>
+    <string name="login">Логин</string>
+    <string name="authentication">Аутентификация\nпользователя</string>
+    <string name="explanation">Для входа в систему\nвведите логин и пароль</string>
+    <string name="come_in">Войти</string>
+    <string name="come_in_NFC">NFC-id</string>
+    <string name="status_internet_connection_is_in">Интернет-соединение активно</string>
+    <string name="status_internet_connection_is_out">Интернет-соединение отсутствует</string>
+    <string name="transport">Номер ТС</string>
+    <string name="rout">Маршрут</string>
+    <string name="info_about_open_session">Перед началом работы требуется открыть сессию</string>
+    <string name="start_session">Начать сессию</string>
+    <string name="exit_session">Завершить сессию</string>
+    <string name="send_complaint">Сообщить о нарушении</string>
+    <string name="user_name_format">%1$s %2$s.</string>
+    <string name="initialized_db">БД инициализирована</string>
+    <string name="dao_initialized">Dao инициализирован</string>
+    <string name="fill_graphs_error">Заполните графы логина и пароля!</string>
+    <string name="no_internet_connection">Отсутствует интернет-соединение</string>
+    <string name="conductor_is_not_exist">Пользователь не существует</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="login_or_passw_uncorrect">Введите корректный логин и пароль!</string>
+
+</resources>
